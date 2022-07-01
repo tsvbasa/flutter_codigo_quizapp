@@ -44,6 +44,7 @@ class _QuizPageState extends State<QuizPage> {
         ],
       ).show();
       quizbrain.restart();
+      scoreKeeper.clear();
       setState(() {});
     } else {
       bool correctAnswer = quizbrain.getQuestionAnswer();
@@ -59,8 +60,8 @@ class _QuizPageState extends State<QuizPage> {
           color: Colors.redAccent,
         ));
       }
+
       quizbrain.nextQuestion();
-      scoreKeeper.clear;
       setState(() {});
     }
   }
